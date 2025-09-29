@@ -1,0 +1,37 @@
+{
+    "name": "taller-mecanico-api",
+    "version": "0.1.0",
+    "description": "API REST para el proyecto Taller Mecánico, implementada en Node.js y TypeScript.",
+    "main": "dist/server.js",
+    "scripts": {
+        "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+        "build": "tsc --project tsconfig.json",
+        "start": "node dist/server.js"
+    },
+    "keywords": [
+        "taller",
+        "mecanico",
+        "api",
+        "express",
+        "typescript"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "mysql2": "^3.9.7",
+        "morgan": "^1.10.0",
+        "zod": "^3.23.8"
+    },
+    "devDependencies": {
+        "@types/bcryptjs": "^2.4.6",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^4.17.21",
+        "@types/morgan": "^1.9.7",
+        "@types/node": "^20.14.11",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.4.5"
+    }
+}
