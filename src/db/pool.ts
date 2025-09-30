@@ -4,6 +4,7 @@ import { env } from '../config/env';
 export const pool = mysql.createPool({
     host: env.dbHost,
     user: env.dbUser,
+    port: env.port,
     password: env.dbPassword,
     database: env.dbName,
     waitForConnections: true,
