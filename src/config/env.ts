@@ -15,6 +15,7 @@ export const env = {
     port: parseInt(process.env.PORT ?? '4000', 10),
     dbHost: required(process.env.DB_HOST, 'DB_HOST'),
     dbUser: required(process.env.DB_USER, 'DB_USER'),
+    dbPort: parseInt(process.env.DB_PORT ?? '3306', 10),
     dbPassword: process.env.DB_PASSWORD ?? '',
     dbName: required(process.env.DB_NAME, 'DB_NAME')
 };
