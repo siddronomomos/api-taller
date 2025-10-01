@@ -14,7 +14,11 @@ export const pool = mysql.createPool({
 });
 
 export const withTransaction = async <T>(handler: (conn: mysql.PoolConnection) => Promise<T>): Promise<T> => {
-    const connection = await pool.getConnection();
+    const connection = await pool.getConnection().catch((err) => {
+        console.error('Error getting database connection:', err);
+        throw err;
+    });
+
     try {
         await connection.beginTransaction();
         const result = await handler(connection);
